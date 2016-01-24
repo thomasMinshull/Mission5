@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		550CC65A1C4AF8B500705643 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 550CC6591C4AF8B500705643 /* main.m */; };
 		550CC65D1C4AF8B500705643 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 550CC65C1C4AF8B500705643 /* AppDelegate.m */; };
-		550CC6601C4AF8B500705643 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550CC65F1C4AF8B500705643 /* ViewController.m */; };
+		550CC6601C4AF8B500705643 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550CC65F1C4AF8B500705643 /* LogInViewController.m */; };
 		550CC6631C4AF8B500705643 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550CC6611C4AF8B500705643 /* Main.storyboard */; };
 		550CC6661C4AF8B500705643 /* Mission5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 550CC6641C4AF8B500705643 /* Mission5.xcdatamodeld */; };
 		550CC6681C4AF8B500705643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550CC6671C4AF8B500705643 /* Assets.xcassets */; };
 		550CC66B1C4AF8B500705643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550CC6691C4AF8B500705643 /* LaunchScreen.storyboard */; };
+		5515BE461C55256600A88ECB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5515BE451C55256600A88ECB /* FBSDKLoginKit.framework */; };
+		5515BE4B1C55270000A88ECB /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5515BE481C55270000A88ECB /* User+CoreDataProperties.m */; };
+		5515BE4C1C55270000A88ECB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5515BE4A1C55270000A88ECB /* User.m */; };
+		5515BE4F1C55294300A88ECB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5515BE4E1C55294300A88ECB /* MainViewController.m */; };
+		5544F31A1C52CADC0048744D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5544F3191C52CADC0048744D /* FBSDKCoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +26,21 @@
 		550CC6591C4AF8B500705643 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		550CC65B1C4AF8B500705643 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		550CC65C1C4AF8B500705643 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		550CC65E1C4AF8B500705643 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		550CC65F1C4AF8B500705643 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		550CC65E1C4AF8B500705643 /* LogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		550CC65F1C4AF8B500705643 /* LogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		550CC6621C4AF8B500705643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		550CC6651C4AF8B500705643 /* Mission5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mission5.xcdatamodel; sourceTree = "<group>"; };
 		550CC6671C4AF8B500705643 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		550CC66A1C4AF8B500705643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550CC66C1C4AF8B500705643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5515BE451C55256600A88ECB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		5515BE471C55270000A88ECB /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5515BE481C55270000A88ECB /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5515BE491C55270000A88ECB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5515BE4A1C55270000A88ECB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		5515BE4D1C55294300A88ECB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5515BE4E1C55294300A88ECB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5544F3191C52CADC0048744D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5515BE461C55256600A88ECB /* FBSDKLoginKit.framework in Frameworks */,
+				5544F31A1C52CADC0048744D /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +61,7 @@
 			children = (
 				550CC6571C4AF8B500705643 /* Mission5 */,
 				550CC6561C4AF8B500705643 /* Products */,
+				5544F2F51C4DB8030048744D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,13 +78,19 @@
 			children = (
 				550CC65B1C4AF8B500705643 /* AppDelegate.h */,
 				550CC65C1C4AF8B500705643 /* AppDelegate.m */,
-				550CC65E1C4AF8B500705643 /* ViewController.h */,
-				550CC65F1C4AF8B500705643 /* ViewController.m */,
+				550CC65E1C4AF8B500705643 /* LogInViewController.h */,
+				550CC65F1C4AF8B500705643 /* LogInViewController.m */,
+				5515BE4D1C55294300A88ECB /* MainViewController.h */,
+				5515BE4E1C55294300A88ECB /* MainViewController.m */,
 				550CC6611C4AF8B500705643 /* Main.storyboard */,
 				550CC6671C4AF8B500705643 /* Assets.xcassets */,
 				550CC6691C4AF8B500705643 /* LaunchScreen.storyboard */,
 				550CC66C1C4AF8B500705643 /* Info.plist */,
 				550CC6641C4AF8B500705643 /* Mission5.xcdatamodeld */,
+				5515BE471C55270000A88ECB /* User+CoreDataProperties.h */,
+				5515BE481C55270000A88ECB /* User+CoreDataProperties.m */,
+				5515BE491C55270000A88ECB /* User.h */,
+				5515BE4A1C55270000A88ECB /* User.m */,
 				550CC6581C4AF8B500705643 /* Supporting Files */,
 			);
 			path = Mission5;
@@ -80,6 +102,15 @@
 				550CC6591C4AF8B500705643 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5544F2F51C4DB8030048744D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5515BE451C55256600A88ECB /* FBSDKLoginKit.framework */,
+				5544F3191C52CADC0048744D /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5515BE4B1C55270000A88ECB /* User+CoreDataProperties.m in Sources */,
 				550CC6661C4AF8B500705643 /* Mission5.xcdatamodeld in Sources */,
-				550CC6601C4AF8B500705643 /* ViewController.m in Sources */,
+				5515BE4C1C55270000A88ECB /* User.m in Sources */,
+				550CC6601C4AF8B500705643 /* LogInViewController.m in Sources */,
+				5515BE4F1C55294300A88ECB /* MainViewController.m in Sources */,
 				550CC65D1C4AF8B500705643 /* AppDelegate.m in Sources */,
 				550CC65A1C4AF8B500705643 /* main.m in Sources */,
 			);
@@ -265,7 +299,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = /Users/thomasminshull/Documents/FacebookSDK;
 				INFOPLIST_FILE = Mission5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomm.Mission5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,7 +312,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = /Users/thomasminshull/Documents/FacebookSDK;
 				INFOPLIST_FILE = Mission5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomm.Mission5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +340,7 @@
 				550CC6711C4AF8B500705643 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
