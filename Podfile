@@ -4,6 +4,7 @@
 # use_frameworks!
 
 target 'Mission5' do
+pod 'SDWebImage'
 
 end
 
