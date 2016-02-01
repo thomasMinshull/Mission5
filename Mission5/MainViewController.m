@@ -7,11 +7,16 @@
 //
 
 #import "MainViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "PersistanceManager.h"
 
 @interface MainViewController (){
     FBSDKLoginButton *logoutButton;
+    PersistanceManager *persistanceManager;
+    
 }
 @property (strong, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) IBOutlet UIImageView *profilePic;
 
 @end
 
@@ -19,65 +24,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    logoutButton = [[FBSDKLoginButton alloc]init];
-    logoutButton.center = self.view.center;
-    [self.view addSubview:logoutButton];
+    [self.logoutButton addTarget:self action:@selector(LogoutButtonTouched) forControlEvents:UIControlEventTouchUpInside];
+    persistanceManager = [[PersistanceManager alloc]init];
     
-    
-    //getFacebook info
-    [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
-     startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-         if (!error) {
-             NSLog(@"fetched user:%@", result);
-             if (result != nil) {
-//                 if ([result isKindOfClass:[NSDictionary class]]) {
-//                     NSLog(@"result is a dictionary!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-//                 } else {
-//                     NSLog(@"result is NOT a dictionary!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-//                 }
-//                 NSLog(@"result[id]: %@", [result objectForKey:@"id"]);
-//                 if ([[result objectForKey:@"id"] isKindOfClass:[NSString class]]) {
-//                     NSLog(@"Dictionary returns a string");
-//                 }
-                 NSString *graphPath;
-                 graphPath = [@"/" stringByAppendingString:[result objectForKey:@"id"]];
-                 graphPath = [graphPath stringByAppendingString: @"/picture"];
-                 
-                 NSDictionary *params = @{
-                                          @"height" : [NSNumber numberWithInt:1000],
-                                          @"width" : [NSNumber numberWithInt:1000],
-                                          @"type"  : @"large",
-                                          @"redirect" : @"false"
-                                          };
-                 
-                 FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                               initWithGraphPath:graphPath
-                                               parameters:params
-                                               HTTPMethod:@"GET"];
-                 [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
-                                                       id result,
-                                                       NSError *error) {
-                     if (!error) {
-                         NSLog(@"Result Containing URL: %@",result );
-                         
-                         
-                     }
-                 }];
+}
 
-                 
-             }
-         }
-     }];
+-(void)viewDidAppear:(BOOL)animated {
+    NSLog(@"viewDidAppear for Main View ");
+    if (![FBSDKAccessToken currentAccessToken])  {
+        NSLog(@"Not Logged in");
+        [self performSegueWithIdentifier:@"segueMainToLogin" sender:self];
+    } else {
+        NSString *userName = [persistanceManager getUserName];
+        if (userName != nil) {
+            [self.label setText:userName];
+        } else {
+            NSLog(@"userName == nil");
+        }
+        
+        NSString *userImageUrl = [persistanceManager getUserImageAsString];
+        if (userImageUrl != nil) {
+            [self.profilePic sd_setImageWithURL:[NSURL URLWithString: userImageUrl]];
+        } else {
+            NSLog(@"userImageURL == nil");
+        }
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (![FBSDKAccessToken currentAccessToken]) {
-        [self performSegueWithIdentifier:@"unwindMainToLogin" sender:self];
-    }
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,14 +61,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)LogoutButtonTouched {
+    [[FBSDKLoginManager new] logOut];
+    [self performSegueWithIdentifier:@"segueMainToLogin" sender:self];
 }
-*/
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+}
 
 @end

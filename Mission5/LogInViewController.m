@@ -7,11 +7,12 @@
 //
 
 #import "LogInViewController.h"
-#import "User.h"
+#import "MainViewController.h"
+#import "FaceBookManager.h"
 
 
 @interface LogInViewController ()
-
+@property (strong, nonatomic) IBOutlet UIImageView *smartAssImageView;
 @end
 
 @implementation LogInViewController
@@ -20,19 +21,17 @@
     [super viewDidLoad];
     
     //Facebook Login
-    self.loginButton = [[FBSDKLoginButton alloc]init];
-    self.loginButton.center = self.view.center;
-    [self.view addSubview:self.loginButton];
-    self.loginButton.readPermissions =
-    @[@"public_profile", @"email"];
-    
+    [self.loginButton addTarget:self action:@selector(LoginButtonClicked) forControlEvents:UIControlEventTouchUpInside];
 
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewWillAppear: animated];
     if ([FBSDKAccessToken currentAccessToken]) {
-        [self performSegueWithIdentifier:@"sequeLoginToMain" sender:self];
+        NSLog(@"logged in ");
+        [self unwind];
+    } else {
+        NSLog(@"Not Logged in");
     }
 }
 
@@ -41,7 +40,26 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+-(void)LoginButtonClicked {
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login logInWithReadPermissions:@[@"public_profile"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+        if (error) {
+            NSLog(@"Login Error: %@", error);
+        } else if (result.isCancelled) {
+            NSLog(@"Login Cancelled");
+        } else {
+            NSLog(@"Login successful");
+            FaceBookManager *fbManager = [[FaceBookManager alloc]init];
+            [fbManager saveFBUserDetailsToDeviceWithCompletion:^{
+            }];
+        }
+    }];
+}
+
+ #pragma mark - Navigation
+
+-(void)unwind{
+    [self performSegueWithIdentifier:@"unwindLoginToMain" sender:self];
 }
 
 @end

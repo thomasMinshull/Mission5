@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q6b-3O-klP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Log In View Controller-->
@@ -24,19 +25,38 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRm-Gl-gaB">
+                                <rect key="frame" x="281" y="453" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="smartAss" translatesAutoresizingMaskIntoConstraints="NO" id="Ecm-fl-g65">
+                                <rect key="frame" x="68" y="168" width="464" height="263"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ecm-fl-g65" secondAttribute="height" multiplier="464:263" id="1mX-rk-xlC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3HE-EK-t5y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7pL-mn-KI4"/>
+                            <constraint firstItem="SRm-Gl-gaB" firstAttribute="top" secondItem="Ecm-fl-g65" secondAttribute="bottom" constant="8" id="ITm-f0-f2F"/>
                             <constraint firstItem="3HE-EK-t5y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="UCu-5f-3bX"/>
+                            <constraint firstItem="SRm-Gl-gaB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WUz-f7-ymh"/>
+                            <constraint firstItem="Ecm-fl-g65" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eDt-sT-shs"/>
+                            <constraint firstItem="Ecm-fl-g65" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lyw-Zf-aXM"/>
+                            <constraint firstItem="Ecm-fl-g65" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="yM6-Ja-UyV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="q6b-3O-klP" kind="show" identifier="sequeLoginToMain" id="mdV-dY-Y3B"/>
+                        <outlet property="loginButton" destination="SRm-Gl-gaB" id="dxc-7c-hce"/>
+                        <outlet property="smartAssImageView" destination="Ecm-fl-g65" id="HGC-vp-Rg3"/>
+                        <segue destination="YsP-mK-W0v" kind="unwind" identifier="unwindLoginToMain" unwindAction="prepareForUnwind:" id="8TG-ew-SPK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="YsP-mK-W0v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="358" y="220"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="KZX-oB-Bnc">
@@ -56,24 +76,41 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cO0-2p-NDV">
+                                <rect key="frame" x="220" y="57" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="DDg-Lp-G4b"/>
+                                    <constraint firstAttribute="width" constant="160" id="X4a-2X-pTs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eF-dh-Zce">
+                                <rect key="frame" x="277" y="225" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="1ZM-a2-Fon" secondAttribute="trailing" id="2PC-M0-hRy"/>
-                            <constraint firstItem="1ZM-a2-Fon" firstAttribute="top" secondItem="lH1-vf-T8M" secondAttribute="bottom" constant="8" id="H3W-M5-dRh"/>
-                            <constraint firstItem="1ZM-a2-Fon" firstAttribute="centerX" secondItem="sGk-Og-FjI" secondAttribute="centerX" id="L7f-Z3-dV5"/>
-                            <constraint firstItem="1ZM-a2-Fon" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sGk-Og-FjI" secondAttribute="leadingMargin" id="cNb-wo-tRH"/>
+                            <constraint firstItem="1ZM-a2-Fon" firstAttribute="centerX" secondItem="sGk-Og-FjI" secondAttribute="centerX" id="JoR-eH-yUK"/>
+                            <constraint firstItem="1ZM-a2-Fon" firstAttribute="top" secondItem="lH1-vf-T8M" secondAttribute="bottom" constant="8" id="cp0-ke-zTB"/>
+                            <constraint firstItem="8eF-dh-Zce" firstAttribute="centerX" secondItem="sGk-Og-FjI" secondAttribute="centerX" id="g73-vE-z1D"/>
+                            <constraint firstItem="cO0-2p-NDV" firstAttribute="top" secondItem="1ZM-a2-Fon" secondAttribute="bottom" constant="8" id="gBu-uz-Ylw"/>
+                            <constraint firstItem="8eF-dh-Zce" firstAttribute="top" secondItem="cO0-2p-NDV" secondAttribute="bottom" constant="8" id="kli-gS-oVe"/>
+                            <constraint firstItem="cO0-2p-NDV" firstAttribute="centerX" secondItem="sGk-Og-FjI" secondAttribute="centerX" id="yAY-3w-zpj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="1ZM-a2-Fon" id="nPe-Fr-pg0"/>
-                        <segue destination="8fH-xW-XK3" kind="unwind" identifier="unwindMainToLogin" unwindAction="prepareForUnwind:" id="Vpq-vV-GW3"/>
+                        <outlet property="logoutButton" destination="8eF-dh-Zce" id="ygI-tg-lo8"/>
+                        <outlet property="profilePic" destination="cO0-2p-NDV" id="dcI-O3-41o"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueMainToLogin" id="vAE-iM-evJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwX-3G-uZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="8fH-xW-XK3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1067" y="294"/>
+            <point key="canvasLocation" x="-385" y="220"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="smartAss" width="465" height="263"/>
+    </resources>
 </document>

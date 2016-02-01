@@ -15,10 +15,12 @@
 		550CC6681C4AF8B500705643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550CC6671C4AF8B500705643 /* Assets.xcassets */; };
 		550CC66B1C4AF8B500705643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550CC6691C4AF8B500705643 /* LaunchScreen.storyboard */; };
 		5515BE461C55256600A88ECB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5515BE451C55256600A88ECB /* FBSDKLoginKit.framework */; };
-		5515BE4B1C55270000A88ECB /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5515BE481C55270000A88ECB /* User+CoreDataProperties.m */; };
-		5515BE4C1C55270000A88ECB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5515BE4A1C55270000A88ECB /* User.m */; };
 		5515BE4F1C55294300A88ECB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5515BE4E1C55294300A88ECB /* MainViewController.m */; };
+		5515BE521C56DB7900A88ECB /* PersistanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5515BE511C56DB7900A88ECB /* PersistanceManager.m */; };
 		5544F31A1C52CADC0048744D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5544F3191C52CADC0048744D /* FBSDKCoreKit.framework */; };
+		55BF32811C5C0AE90024ACA3 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BF327E1C5C0AE90024ACA3 /* User+CoreDataProperties.m */; };
+		55BF32821C5C0AE90024ACA3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BF32801C5C0AE90024ACA3 /* User.m */; };
+		55F976881C5711950064E9C1 /* FaceBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F976871C5711950064E9C1 /* FaceBookManager.m */; };
 		FBE9D160A32AB18D6089D1D8 /* libPods-Mission5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFA87E15EB264D06193CAFB /* libPods-Mission5.a */; };
 /* End PBXBuildFile section */
 
@@ -36,13 +38,17 @@
 		550CC66A1C4AF8B500705643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550CC66C1C4AF8B500705643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5515BE451C55256600A88ECB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		5515BE471C55270000A88ECB /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
-		5515BE481C55270000A88ECB /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
-		5515BE491C55270000A88ECB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		5515BE4A1C55270000A88ECB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		5515BE4D1C55294300A88ECB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5515BE4E1C55294300A88ECB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5515BE501C56DB7900A88ECB /* PersistanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistanceManager.h; sourceTree = "<group>"; };
+		5515BE511C56DB7900A88ECB /* PersistanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistanceManager.m; sourceTree = "<group>"; };
 		5544F3191C52CADC0048744D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		55BF327D1C5C0AE90024ACA3 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		55BF327E1C5C0AE90024ACA3 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		55BF327F1C5C0AE90024ACA3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		55BF32801C5C0AE90024ACA3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		55F976861C5711950064E9C1 /* FaceBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBookManager.h; sourceTree = "<group>"; };
+		55F976871C5711950064E9C1 /* FaceBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBookManager.m; sourceTree = "<group>"; };
 		CA3A919346B69BD59AA18702 /* Pods-Mission5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission5.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mission5/Pods-Mission5.debug.xcconfig"; sourceTree = "<group>"; };
 		F427EBA34CCBF854B178D262 /* Pods-Mission5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission5.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mission5/Pods-Mission5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,15 +94,19 @@
 				550CC65F1C4AF8B500705643 /* LogInViewController.m */,
 				5515BE4D1C55294300A88ECB /* MainViewController.h */,
 				5515BE4E1C55294300A88ECB /* MainViewController.m */,
+				5515BE501C56DB7900A88ECB /* PersistanceManager.h */,
+				5515BE511C56DB7900A88ECB /* PersistanceManager.m */,
+				55F976861C5711950064E9C1 /* FaceBookManager.h */,
+				55F976871C5711950064E9C1 /* FaceBookManager.m */,
 				550CC6611C4AF8B500705643 /* Main.storyboard */,
 				550CC6671C4AF8B500705643 /* Assets.xcassets */,
 				550CC6691C4AF8B500705643 /* LaunchScreen.storyboard */,
 				550CC66C1C4AF8B500705643 /* Info.plist */,
 				550CC6641C4AF8B500705643 /* Mission5.xcdatamodeld */,
-				5515BE471C55270000A88ECB /* User+CoreDataProperties.h */,
-				5515BE481C55270000A88ECB /* User+CoreDataProperties.m */,
-				5515BE491C55270000A88ECB /* User.h */,
-				5515BE4A1C55270000A88ECB /* User.m */,
+				55BF327D1C5C0AE90024ACA3 /* User+CoreDataProperties.h */,
+				55BF327E1C5C0AE90024ACA3 /* User+CoreDataProperties.m */,
+				55BF327F1C5C0AE90024ACA3 /* User.h */,
+				55BF32801C5C0AE90024ACA3 /* User.m */,
 				550CC6581C4AF8B500705643 /* Supporting Files */,
 			);
 			path = Mission5;
@@ -250,12 +260,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5515BE4B1C55270000A88ECB /* User+CoreDataProperties.m in Sources */,
 				550CC6661C4AF8B500705643 /* Mission5.xcdatamodeld in Sources */,
-				5515BE4C1C55270000A88ECB /* User.m in Sources */,
+				5515BE521C56DB7900A88ECB /* PersistanceManager.m in Sources */,
+				55BF32821C5C0AE90024ACA3 /* User.m in Sources */,
 				550CC6601C4AF8B500705643 /* LogInViewController.m in Sources */,
+				55F976881C5711950064E9C1 /* FaceBookManager.m in Sources */,
 				5515BE4F1C55294300A88ECB /* MainViewController.m in Sources */,
 				550CC65D1C4AF8B500705643 /* AppDelegate.m in Sources */,
+				55BF32811C5C0AE90024ACA3 /* User+CoreDataProperties.m in Sources */,
 				550CC65A1C4AF8B500705643 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

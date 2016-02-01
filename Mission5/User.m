@@ -1,9 +1,9 @@
 //
 //  User.m
-//  Mission5
+//  
 //
-//  Created by thomas minshull on 2016-01-24.
-//  Copyright © 2016 thomas minshull. All rights reserved.
+//  Created by thomas minshull on 2016-01-29.
+//
 //
 
 #import "User.h"

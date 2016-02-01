@@ -11,5 +11,6 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface MainViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *logoutButton;
 
 @end
