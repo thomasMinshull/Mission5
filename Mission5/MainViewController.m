@@ -11,7 +11,6 @@
 #import "PersistanceManager.h"
 
 @interface MainViewController (){
-    FBSDKLoginButton *logoutButton;
     PersistanceManager *persistanceManager;
     
 }

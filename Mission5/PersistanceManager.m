@@ -9,7 +9,6 @@
 #import "PersistanceManager.h"
 #import "AppDelegate.h"
 #import "User+CoreDataProperties.h"
-#import <CoreData/CoreData.h> // not sure if I need this
 #import "User+CoreDataProperties.h"
 
 

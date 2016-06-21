@@ -1,0 +1,5 @@
+Mission 5 is an application built for learning purposes by Thomas Minshull under the mentorship of Michael Thompson. 
+
+Mission 5 was built in Jan of 2016, and contains a sassy, then topical image on the login screen. 
+
+Mission 5 was used to learn about the Facebook Login Process (done using a manually imported library, as apposed to a cocoapod). The app fetches the users facebook Profile picture and username and saves this information using core data. 
